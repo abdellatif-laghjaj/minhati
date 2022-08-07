@@ -34,3 +34,7 @@ section {
     top: 0;
     left: calc(50% - 100px);
 }
+
+.search-from{
+    width: 400px;
+}
