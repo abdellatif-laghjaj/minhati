@@ -25,3 +25,14 @@ body {
     top: 0;
     left: calc(50% - 100px);
 }
+
+
+.date-box{
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

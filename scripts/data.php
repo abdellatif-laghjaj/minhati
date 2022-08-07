@@ -10,18 +10,22 @@ if (isset($_POST['submit'])) {
     //check if there is any result
     if (mysqli_num_rows($result) > 0) {
         $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    }else{
+    } else {
         $data = "No result";
     }
 }
 
-function short_text($text, $limit = 100){
-    $text = $text." ";
+function short_text($text, $limit = 100)
+{
+    $text = $text . " ";
     $text = substr($text, 0, $limit);
     $text = substr($text, 0, strrpos($text, ' '));
-    $text = $text."...";
+    $text = $text . "...";
     return $text;
 }
+
+//get current date
+$date = date('Y-m-d');
 
 ?>
 
@@ -47,6 +51,16 @@ function short_text($text, $limit = 100){
 <body>
     <div class="data-container">
         <img src="../res/logo.png" alt="logo" class="logo">
+
+        <div class="alert alert-success shadow-lg date-box text-center mb-3">
+            <div>
+                <i class="fa fa-calendar-alt"></i>
+                <span>
+                    <?php echo $date; ?>
+                </span>
+            </div>
+        </div>
+
         <div class="overflow-x-auto">
             <table class="table table-zebra w-full">
                 <!-- head -->
