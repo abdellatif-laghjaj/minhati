@@ -62,5 +62,11 @@ section {
 }
 
 .search-input label{
-    border-radius: 10px;
+    border-radius: 16px;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
