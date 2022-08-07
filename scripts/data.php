@@ -9,11 +9,9 @@
 
         //check if there is any result
         if(mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "id: " . $row["id"]. " - Name: " . $row["nom"]. " " . $row["prenom"]. "<br>";
-            }
+            echo 'Success';
         } else {
-            echo "0 results";
+            echo 'Fail';
         }
     }
 ?>
