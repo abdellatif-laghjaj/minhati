@@ -23,7 +23,7 @@
         <a href="#">
             <!-- <img src="res/logo.png" alt="logo" class="logo"> -->
         </a>
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-base-100 shadow-xl">
             <div class="navbar-start">
               <div class="dropdown">
                 <label tabindex="0" class="btn btn-ghost btn-circle">
@@ -40,15 +40,43 @@
               <a class="btn btn-ghost normal-case text-xl">LOGO</a>
             </div>
             <div class="navbar-end">
-              <button class="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              </button>
-              <button class="btn btn-ghost btn-circle">
-                <div class="indicator">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-                  <span class="badge badge-xs badge-primary indicator-item"></span>
-                </div>
-              </button>
+                <div class="navbar-item">
+                    <div class="dropdown dropdown-end">
+                      <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <i class="fa-solid fa-swatchbook"></i>
+                      </label>
+                      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                          <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <circle cx="12" cy="12" r="3" />
+                              <line x1="12" y1="5" x2="12" y2="3" />
+                              <line x1="17" y1="7" x2="18.4" y2="5.6" />
+                              <line x1="19" y1="12" x2="21" y2="12" />
+                              <line x1="17" y1="17" x2="18.4" y2="18.4" />
+                              <line x1="12" y1="19" x2="12" y2="21" />
+                              <line x1="7" y1="17" x2="5.6" y2="18.4" />
+                              <line x1="6" y1="12" x2="4" y2="12" />
+                              <line x1="7" y1="7" x2="5.6" y2="5.6" />
+                            </svg>
+                            Light
+                          </a>
+                        </li>
+                        <li>
+                          <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                              <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
+                              <path d="M19 11h2m-1 -1v2" />
+                            </svg>
+                            Dark
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
             </div>
           </div>
         <div class="home">
