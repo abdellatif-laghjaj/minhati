@@ -38,20 +38,3 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.list-data{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.list-data .data-item{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
