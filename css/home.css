@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;800&display=swap');
 
-::root{
+::root {
     --text-color-white: #ffffff;
     --text-color-black: #2C3639;
 }
@@ -22,19 +22,20 @@ section {
     align-items: center;
 }
 
-.home{
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;   
+    width: 600px;
     padding: 1rem;
+
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(100, 106, 197, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .top-text {
@@ -61,11 +62,11 @@ section {
     width: 400px;
 }
 
-.search-input label{
+.search-input label {
     border-radius: 16px;
 }
 
-.navbar{
+.navbar {
     position: absolute;
     top: 0;
     left: 0;
