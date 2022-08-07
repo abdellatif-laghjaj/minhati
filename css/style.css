@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;800&display=swap');
 
+::root{
+    --text-color-white: #ffffff;
+    --text-color-black: #2C3639;
+}
+
 body {
     font-family: 'Merriweather Sans', sans-serif;
     background-image: url(/res/vg.svg);
@@ -9,7 +14,7 @@ body {
 }
 
 section {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,14 +22,31 @@ section {
     align-items: center;
 }
 
-#search-section {
-    position: relative;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(170, 176, 255, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+.home{
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;   
+    padding: 1rem;
+}
+
+.top-text {
+    font-size: 24px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#search-section {
+    margin: 0 auto;
+    position: relative;
 }
 
 .logo {
@@ -35,6 +57,6 @@ section {
     left: calc(50% - 100px);
 }
 
-.search-from{
+.search-from {
     width: 400px;
 }
