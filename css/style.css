@@ -2,9 +2,13 @@
 
 body {
     font-family: 'Merriweather Sans', sans-serif;
+    background-image: url(/res/vg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-section{
+section {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -13,11 +17,17 @@ section{
     align-items: center;
 }
 
-#search-section{
+#search-section {
     position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(170, 176, 255, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.logo{
+.logo {
     position: absolute;
     width: 200px;
     height: 200px;
