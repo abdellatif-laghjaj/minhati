@@ -4,14 +4,20 @@ include '../config/connection.php';
 if (isset($_POST['submit'])) {
     $name_value = $_POST['search'];
 
-    $sql = "SELECT * FROM etudiant WHERE nom LIKE '%$name_value%'";
-    $result = mysqli_query($conn, $sql);
-
-    //check if there is any result
-    if (mysqli_num_rows($result) > 0) {
-        $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    //check if the search field is empty
+    if (empty($name_value)) {
+        echo "Please enter a name";
+        header("Location: ../index.html");
     } else {
-        $data = "No result";
+        $sql = "SELECT * FROM etudiant WHERE nom LIKE '%$name_value%'";
+        $result = mysqli_query($conn, $sql);
+
+        //check if there is any result
+        if (mysqli_num_rows($result) > 0) {
+            $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        } else {
+            $data = "No result";
+        }
     }
 }
 
@@ -24,7 +30,8 @@ function short_text($text, $limit = 100)
     return $text;
 }
 
-function encode_text($text){
+function encode_text($text)
+{
     //change the middle of the text with *
     $text = str_replace(substr($text, 3, strlen($text) - 6), "***", $text);
     return $text;
