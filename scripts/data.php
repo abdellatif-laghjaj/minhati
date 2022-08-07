@@ -1,6 +1,6 @@
 <?php
 include '../config/connection.php';
-$message = '';
+
 if (isset($_POST['submit'])) {
     $name_value = $_POST['search'];
 
@@ -9,15 +9,20 @@ if (isset($_POST['submit'])) {
 
     //check if there is any result
     if (mysqli_num_rows($result) > 0) {
-        $message = '<div class="alert alert-success">
-                            <strong>Success!</strong> There is at least one result.
-                        </div>';
-    } else {
-        $message = '<div class="alert alert-danger">
-                            <strong>Error!</strong> There is no result.
-                        </div>';
+        $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }else{
+        $data = "No result";
     }
 }
+
+function short_text($text, $limit = 100){
+    $text = $text." ";
+    $text = substr($text, 0, $limit);
+    $text = substr($text, 0, strrpos($text, ' '));
+    $text = $text."...";
+    return $text;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +45,6 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <?php echo $message; ?>
-
     <div class="data-container">
         <img src="../res/logo.png" alt="logo" class="logo">
         <div class="overflow-x-auto">
@@ -50,26 +53,20 @@ if (isset($_POST['submit'])) {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
-                        <th>Job</th>
-                        <th>Favorite Color</th>
+                        <th>Nom Complet</th>
+                        <th>Text</th>
+                        <th>Text</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- row 1 -->
-                    <tr>
-                        <th>1</th>
-                        <td>Cy Ganderton</td>
-                        <td>Quality Control Specialist</td>
-                        <td>Blue</td>
-                    </tr>
-                    <!-- row 2 -->
-                    <tr>
-                        <th>2</th>
-                        <td>Jared</td>
-                        <td>Software Engineer</td>
-                        <td>Green</td>
-                    </tr>
+                    <?php foreach ($data as $key => $value) : ?>
+                        <tr>
+                            <td><?php echo $key + 1; ?></td>
+                            <td><?php echo $value['nom'] . " " . $value['prenom']; ?></td>
+                            <td><?php echo short_text($value['text_num']); ?></td>
+                            <td><?php echo $value['text_encoded']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
