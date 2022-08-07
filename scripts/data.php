@@ -84,6 +84,14 @@ $date = date('Y-m-d');
                 </tbody>
             </table>
         </div>
+
+        <!-- Download button -->
+        <div class="text-center w-full">
+            <a href="" class="btn btn-primary w-full" download>
+                <i class="fa fa-download mr-3"></i>
+                Download
+            </a>
+        </div>
     </div>
 </body>
 
