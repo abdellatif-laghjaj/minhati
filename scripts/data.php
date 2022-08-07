@@ -63,32 +63,13 @@ $date = date('Y-m-d');
 
         <div class="overflow-x-auto">
             <?php if (isset($data) && $data != "No result") : ?>
-                <ul class="w-48 divide-y-2 divide-gray-200">
-                    <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded">
-                        <div>
-                            Number of ads
+                <?php foreach ($data as $key => $value) : ?>
+                    <div class="list-data">
+                        <div class="data-item">
+                            
                         </div>
-                        <div class="h-6 w-6 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                            2
-                        </div>
-                    </li>
-                    <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded">
-                        <div>
-                            Active ads
-                        </div>
-                        <div class="h-6 w-6 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                            4
-                        </div>
-                    </li>
-                    <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded">
-                        <div>
-                            Expired ads
-                        </div>
-                        <div class="h-6 w-6 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                            1
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                <?php endforeach; ?>
             <?php endif; ?>
         </div>
 
