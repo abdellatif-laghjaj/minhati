@@ -24,6 +24,12 @@ function short_text($text, $limit = 100)
     return $text;
 }
 
+function encode_text($text){
+    //change the middle of the text with *
+    $text = str_replace(substr($text, 3, strlen($text) - 6), "***", $text);
+    return $text;
+}
+
 //get current date
 $date = date('Y-m-d');
 
@@ -86,7 +92,7 @@ $date = date('Y-m-d');
                                 Text
                             </div>
                             <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                                <?php echo short_text($value['text_encoded']); ?>
+                                <?php echo encode_text($value['text_encoded']); ?>
                             </div>
                         </li>
                     </ul>
