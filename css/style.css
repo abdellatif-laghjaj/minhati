@@ -60,3 +60,7 @@ section {
 .search-from {
     width: 400px;
 }
+
+.search-input label{
+    border-radius: 10px;
+}
