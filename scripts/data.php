@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/data.css">
 
     <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.22.0/dist/full.css" rel="stylesheet" type="text/css" />
@@ -42,7 +42,8 @@ if (isset($_POST['submit'])) {
 <body>
     <?php echo $message; ?>
 
-    <div class="container">
+    <div class="data-container">
+        <img src="../res/logo.png" alt="logo" class="logo">
         <div class="overflow-x-auto">
             <table class="table table-zebra w-full">
                 <!-- head -->
