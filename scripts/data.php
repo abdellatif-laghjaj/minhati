@@ -125,7 +125,7 @@ $date = date('Y-m-d');
                 </div>
             </div>
 
-            <div class="overflow-x-auto w-full shadow-lg p-3 data-list">
+            <div class="overflow-x-auto w-full shadow-lg p-3 data-list" id="data-list">
                 <?php if (isset($data) && $data != "No result") : ?>
                     <?php foreach ($data as $key => $value) : ?>
                         <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
@@ -188,15 +188,17 @@ $date = date('Y-m-d');
             </div>
             <!-- Download button -->
             <div class="text-center w-full mt-2">
-                <a href="" class="btn btn-primary w-full">
+                <button class="btn btn-primary w-full" id="saveAsPdf">
                     <i class="fa fa-download mr-3"></i>
                     Telecharger les données
-                </a>
+                </button>
             </div>
         </div>
     </div>
 
     <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="../js/app.js"></script>
 </body>
 
