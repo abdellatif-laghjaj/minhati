@@ -94,6 +94,10 @@ section {
         min-width: 90%;
     }
 
+    .home p{
+        font-size: 18px;
+    }
+
     .home form .search-from{
         width: 100%;
     }
