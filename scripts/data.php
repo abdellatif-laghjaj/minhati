@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $search_value = $_POST['search'];
 
     //check if the search field is empty
-    if (empty($name_value)) {
+    if (empty($search_value)) {
         echo "Please enter a name";
         header("Location: ../index.html");
     } else {
