@@ -72,7 +72,7 @@ $date = date('Y-m-d');
                         </svg>
                     </label>
                     <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Home</a></li>
+                        <li><a href="../index.html">Acceuil</a></li>
                         <li><a>About</a></li>
                         <li><a>Contact</a></li>
                     </ul>
@@ -107,11 +107,11 @@ $date = date('Y-m-d');
         </div>
 
         <div class="fetched_data">
-            <div class="alert alert-warning shadow-lg my-2">
+            <div class="alert alert-warning shadow-lg my-2 flex justify-center items-center">
                 <div>
                     <i class="fa-solid fa-exclamation-triangle"></i>
                     <span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Text
                     </span>
                 </div>
             </div>
