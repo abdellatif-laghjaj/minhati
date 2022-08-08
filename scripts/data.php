@@ -106,7 +106,7 @@ $date = date('Y-m-d');
             </div>
         </div>
 
-        <div class="fetched_data">
+        <div class="fetched_data mt-4">
             <div class="alert alert-warning shadow-lg my-2 flex justify-center items-center">
                 <div>
                     <i class="fa-solid fa-exclamation-triangle"></i>
