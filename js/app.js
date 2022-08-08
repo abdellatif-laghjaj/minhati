@@ -16,17 +16,10 @@ createApp({
         saveThemeToLocalStorage(theme) {
             localStorage.setItem('theme', theme);
         },
-        changeTheme() {
-            const theme_items = document.querySelectorAll('.theme-item');
-
-            theme_items.forEach(item => {
-                item.addEventListener('click', () => {
-                    //change data theme attribute of html tag
-                    document.documentElement.setAttribute('data-theme', item.getAttribute('theme-data'));
-                    //save theme to local storage
-                    this.saveThemeToLocalStorage(item.getAttribute('theme-data'));
-                });
-            });
+        changeTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            //save theme to local storage
+            this.saveThemeToLocalStorage(theme);
         },
         loader() {
             setTimeout(() => {
