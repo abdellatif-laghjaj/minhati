@@ -85,7 +85,7 @@ $date = date('Y-m-d');
                 <div class="navbar-item">
                     <div class="dropdown dropdown-end">
                         <label tabindex="0" class="btn btn-ghost btn-circle">
-                            <i class="fa-solid fa-swatchbook"></i>
+                            <i class="fa-solid fa-palette"></i>
                         </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li class="theme-item" theme-data="lemonade">
