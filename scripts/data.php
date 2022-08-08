@@ -129,7 +129,7 @@ $date = date('Y-m-d');
                 <?php if (isset($data) && $data != "No result") : ?>
                     <?php foreach ($data as $key => $value) : ?>
                         <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
-                            
+
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
                                 <div class="font-bold" style="color: #2C3333;">
                                     Text
@@ -138,7 +138,7 @@ $date = date('Y-m-d');
                                     <?php echo $value['id']; ?>
                                 </div>
                             </li>
-                        
+
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
                                 <div class="font-bold" style="color: #2C3333;">
                                     Nom et Prénom
@@ -197,9 +197,35 @@ $date = date('Y-m-d');
     </div>
 
     <!-- JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="../js/app.js"></script>
+    <script>
+
+        const save_pdf_btn = document.getElementById('saveAsPdf');
+
+        save_pdf_btn.addEventListener('click', saveAsPdf);
+
+        function saveAsPdf() {
+            import { jsPDF } from "jspdf";
+            var doc = new jsPDF();
+            var elementHandler = {
+                '#ignorePDF': function(element, renderer) {
+                    return true;
+                }
+            };
+            var source = window.document.getElementsByTagName("body")[0];
+            doc.fromHTML(
+                source,
+                15,
+                15, {
+                    'width': 180,
+                    'elementHandlers': elementHandler
+                });
+
+            doc.output("dataurlnewwindow")
+        }
+    </script>
 </body>
 
 </html>
