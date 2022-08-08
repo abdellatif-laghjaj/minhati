@@ -88,3 +88,12 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #EF5B0C;
 }
+
+/* Responsive */
+@media only screen and (max-width: 634px){
+    .fetched_data{
+        width: 90%;
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
