@@ -121,26 +121,27 @@ $date = date('Y-m-d');
                     <?php foreach ($data as $key => $value) : ?>
                         <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                                <div>
+                                <div class="font-bold">
                                     Nom et Prénom
                                 </div>
-                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
                                     <?php echo $value['nom'] . " " . $value['prenom']; ?>
                                 </div>
                             </li>
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
                                 <div>
+                                <div class="font-bold">
                                     Text
                                 </div>
-                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
                                     <?php echo short_text($value['text_num'], 20); ?>
                                 </div>
                             </li>
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                                <div>
+                                <div class="font-bold">
                                     Text
                                 </div>
-                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
                                     <?php echo encode_text($value['text_encoded']); ?>
                                 </div>
                             </li>
@@ -153,7 +154,7 @@ $date = date('Y-m-d');
             <div class="text-center w-full">
                 <a href="" class="btn btn-primary w-full" download>
                     <i class="fa fa-download mr-3"></i>
-                    Download
+                    Telecharger les données
                 </a>
             </div>
         </div>
