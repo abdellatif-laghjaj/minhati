@@ -163,25 +163,6 @@ $date = date('Y-m-d');
                                     <?php echo encode_text($value['text_encoded']); ?>
                                 </div>
                             </li>
-
-
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Text
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
-                                    <?php echo encode_text($value['text_encoded']); ?>
-                                </div>
-                            </li>
-
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Text
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
-                                    <?php echo encode_text($value['text_encoded']); ?>
-                                </div>
-                            </li>
                         </ul>
                     <?php endforeach; ?>
                 <?php endif; ?>
