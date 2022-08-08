@@ -34,6 +34,8 @@ body {
     -webkit-backdrop-filter: blur(12.5px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow-y: auto;
+    max-height: 50vh;
 }
 
 .navbar{

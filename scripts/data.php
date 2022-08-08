@@ -129,6 +129,16 @@ $date = date('Y-m-d');
                 <?php if (isset($data) && $data != "No result") : ?>
                     <?php foreach ($data as $key => $value) : ?>
                         <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
+                            
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div class="font-bold" style="color: #2C3333;">
+                                    Text
+                                </div>
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo $value['id']; ?>
+                                </div>
+                            </li>
+                        
                             <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
                                 <div class="font-bold" style="color: #2C3333;">
                                     Nom et Prénom
@@ -153,17 +163,35 @@ $date = date('Y-m-d');
                                     <?php echo encode_text($value['text_encoded']); ?>
                                 </div>
                             </li>
+
+
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div class="font-bold" style="color: #2C3333;">
+                                    Text
+                                </div>
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo encode_text($value['text_encoded']); ?>
+                                </div>
+                            </li>
+
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div class="font-bold" style="color: #2C3333;">
+                                    Text
+                                </div>
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo encode_text($value['text_encoded']); ?>
+                                </div>
+                            </li>
                         </ul>
                     <?php endforeach; ?>
                 <?php endif; ?>
-
-                <!-- Download button -->
-                <div class="text-center w-full">
-                    <a href="" class="btn btn-primary w-full">
-                        <i class="fa fa-download mr-3"></i>
-                        Telecharger les données
-                    </a>
-                </div>
+            </div>
+            <!-- Download button -->
+            <div class="text-center w-full mt-2">
+                <a href="" class="btn btn-primary w-full">
+                    <i class="fa fa-download mr-3"></i>
+                    Telecharger les données
+                </a>
             </div>
         </div>
     </div>
