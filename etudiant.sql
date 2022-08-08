@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2022 at 10:23 PM
+-- Generation Time: Aug 08, 2022 at 02:20 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.3.16
 
@@ -29,11 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `etudiant` (
   `id` bigint(20) NOT NULL,
+  `cne` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `text_num` varchar(255) NOT NULL,
   `text_encoded` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -53,7 +54,7 @@ ALTER TABLE `etudiant`
 -- AUTO_INCREMENT for table `etudiant`
 --
 ALTER TABLE `etudiant`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

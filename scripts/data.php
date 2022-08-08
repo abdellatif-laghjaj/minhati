@@ -2,14 +2,14 @@
 include '../config/connection.php';
 
 if (isset($_POST['submit'])) {
-    $name_value = $_POST['search'];
+    $search_value = $_POST['search'];
 
     //check if the search field is empty
     if (empty($name_value)) {
         echo "Please enter a name";
         header("Location: ../index.html");
     } else {
-        $sql = "SELECT * FROM etudiant WHERE nom LIKE '%$name_value%'";
+        $sql = "SELECT * FROM etudiant WHERE cne LIKE '%$search_value%'";
         $result = mysqli_query($conn, $sql);
 
         //check if there is any result
