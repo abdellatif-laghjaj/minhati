@@ -27,11 +27,16 @@ createApp({
                     this.saveThemeToLocalStorage(item.getAttribute('theme-data'));
                 });
             });
+        },
+        loader(){
+            setTimeout(() => {
+                this.isLoaded = true;
+            }, 4000);
         }
     },
     created() {
         document.addEventListener('DOMContentLoaded', this.changeTheme);
         this.loadThemeFromLocalStorage();
-        this.isLoaded = true;
+        this.loader();
     },
 }).mount('#app')
