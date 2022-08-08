@@ -29,6 +29,10 @@ body {
     left: 0;
 }
 
+.fetched_data{
+    width: 600px;
+}
+
 .logo {
     position: absolute;
     width: 200px;

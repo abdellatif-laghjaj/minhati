@@ -106,54 +106,56 @@ $date = date('Y-m-d');
             </div>
         </div>
 
-        <div class="alert alert-success shadow-lg date-box text-center mb-3">
-            <div>
-                <i class="fa fa-calendar-alt"></i>
-                <span>
-                    <?php echo $date; ?>
-                </span>
+        <div class="fetched_data">
+            <div class="alert alert-success shadow-lg date-box text-center mb-3">
+                <div>
+                    <i class="fa fa-calendar-alt"></i>
+                    <span>
+                        <?php echo $date; ?>
+                    </span>
+                </div>
             </div>
-        </div>
 
-        <div class="overflow-x-auto w-full">
-            <?php if (isset($data) && $data != "No result") : ?>
-                <?php foreach ($data as $key => $value) : ?>
-                    <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
-                        <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                            <div>
-                                Nom et Prénom
-                            </div>
-                            <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                                <?php echo $value['nom'] . " " . $value['prenom']; ?>
-                            </div>
-                        </li>
-                        <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                            <div>
-                                Text
-                            </div>
-                            <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                                <?php echo short_text($value['text_num'], 20); ?>
-                            </div>
-                        </li>
-                        <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
-                            <div>
-                                Text
-                            </div>
-                            <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
-                                <?php echo encode_text($value['text_encoded']); ?>
-                            </div>
-                        </li>
-                    </ul>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
+            <div class="overflow-x-auto w-full">
+                <?php if (isset($data) && $data != "No result") : ?>
+                    <?php foreach ($data as $key => $value) : ?>
+                        <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div>
+                                    Nom et Prénom
+                                </div>
+                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo $value['nom'] . " " . $value['prenom']; ?>
+                                </div>
+                            </li>
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div>
+                                    Text
+                                </div>
+                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo short_text($value['text_num'], 20); ?>
+                                </div>
+                            </li>
+                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2">
+                                <div>
+                                    Text
+                                </div>
+                                <div class="p-2 rounded-full bg-blue-600 flex justify-center items-center text-blue-50">
+                                    <?php echo encode_text($value['text_encoded']); ?>
+                                </div>
+                            </li>
+                        </ul>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
 
-        <!-- Download button -->
-        <div class="text-center w-full">
-            <a href="" class="btn btn-primary w-full" download>
-                <i class="fa fa-download mr-3"></i>
-                Download
-            </a>
+            <!-- Download button -->
+            <div class="text-center w-full">
+                <a href="" class="btn btn-primary w-full" download>
+                    <i class="fa fa-download mr-3"></i>
+                    Download
+                </a>
+            </div>
         </div>
     </div>
 </body>
