@@ -58,11 +58,13 @@ $date = date('Y-m-d');
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Vue Js-->
+    <script src="https://unpkg.com/vue@3"></script>
     <title>Minhati</title>
 </head>
 
 <body>
-    <div class="data-container">
+    <div class="data-container" id="app">
         <div class="navbar bg-base-100 shadow-xl">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -169,7 +171,7 @@ $date = date('Y-m-d');
             </div>
             <!-- Download button -->
             <div class="text-center w-full mt-2">
-                <button class="btn btn-primary w-full" id="saveAsPdf">
+                <button class="btn btn-primary w-full" @click="saveAsPdf('data-list')">
                     <i class="fa fa-download mr-3"></i>
                     Telecharger les données
                 </button>
@@ -177,9 +179,8 @@ $date = date('Y-m-d');
         </div>
     </div>
 
-    <!-- JS --> 
+    <!-- JS -->
     <script src="../js/app.js"></script>
-    <script src="../js/save_pdf.js"></script>
 </body>
 
 </html>
