@@ -63,7 +63,48 @@ $date = date('Y-m-d');
 
 <body>
     <div class="data-container">
-        <img src="../res/logo.png" alt="logo" class="logo">
+        <div class="navbar bg-base-100 shadow-xl">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a class="btn btn-ghost normal-case text-xl">LOGO</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <i class="fa-solid fa-swatchbook"></i>
+                        </label>
+                        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="theme-item" theme-data="lemonade">
+                                <a>
+                                    <i class="fa-solid fa-sun"></i>
+                                    Light
+                                </a>
+                            </li>
+                            <li class="theme-item" theme-data="halloween">
+                                <a>
+                                    <i class="fa-solid fa-moon"></i>
+                                    Dark
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="alert alert-success shadow-lg date-box text-center mb-3">
             <div>
