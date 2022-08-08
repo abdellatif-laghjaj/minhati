@@ -79,7 +79,7 @@ $date = date('Y-m-d');
                 </div>
             </div>
             <div class="navbar-center">
-                <a class="btn btn-ghost normal-case text-xl">LOGO</a>
+                <a href="../index.html" class="btn btn-ghost normal-case text-xl">LOGO</a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
