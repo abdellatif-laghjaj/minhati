@@ -181,6 +181,7 @@ $date = date('Y-m-d');
 
     <!-- JS -->
     <script src="../js/app.js"></script>
+    <script src="../js/theme.js"></script>
 </body>
 
 </html>
