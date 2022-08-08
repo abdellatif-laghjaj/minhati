@@ -84,3 +84,17 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+
+/* Responsive */
+@media only screen and (max-width: 632px){
+    .home{
+        width: 90%;
+        max-width: 90%;
+        min-width: 90%;
+    }
+
+    .home form .search-from{
+        width: 100%;
+    }
+}

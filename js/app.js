@@ -37,7 +37,7 @@ createApp({
         }
     },
     created() {
-        document.addEventListener('DOMContentLoaded', this.changeTheme);
+        document.addEventListener('DOMContentLoaded', this.loadThemeFromLocalStorage);
         this.loadThemeFromLocalStorage();
         this.loader();
     },

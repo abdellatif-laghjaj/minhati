@@ -90,13 +90,13 @@ $date = date('Y-m-d');
                             <i class="fa-solid fa-palette"></i>
                         </label>
                         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            <li class="theme-item" theme-data="lemonade">
+                            <li class="theme-item" @click="changeTheme('lemonade')">
                                 <a>
                                     <i class="fa-solid fa-sun"></i>
                                     Light
                                 </a>
                             </li>
-                            <li class="theme-item" theme-data="halloween">
+                            <li class="theme-item" @click="changeTheme('halloween')">
                                 <a>
                                     <i class="fa-solid fa-moon"></i>
                                     Dark
