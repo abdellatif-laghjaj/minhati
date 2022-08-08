@@ -158,6 +158,9 @@ $date = date('Y-m-d');
             </div>
         </div>
     </div>
+
+    <!-- JS -->
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
