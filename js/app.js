@@ -1,5 +1,4 @@
 const theme_items = document.querySelectorAll('.theme-item');
-const save_as_pdf_btn = document.querySelector('#saveAsPdf');
 
 document.addEventListener('DOMContentLoaded', loadThemeFromLocalStorage);
 
