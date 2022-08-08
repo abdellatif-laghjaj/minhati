@@ -26,3 +26,13 @@ function loadThemeFromLocalStorage() {
         document.documentElement.setAttribute('data-theme', theme);
     }
 }
+
+const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
