@@ -88,3 +88,14 @@ body {
         max-width: 90%;
     }
 }
+
+@media only screen and (max-width: 432px){
+    .data-list-item{
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .data-list-item-value{
+        width: 100%;
+    }
+}
