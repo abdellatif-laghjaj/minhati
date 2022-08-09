@@ -50,14 +50,6 @@ section {
     position: relative;
 }
 
-.logo {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 0;
-    left: calc(50% - 100px);
-}
-
 .search-from {
     width: 400px;
 }

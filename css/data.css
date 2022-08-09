@@ -49,15 +49,6 @@ body {
     width: 600px;
 }
 
-.logo {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 0;
-    left: calc(50% - 100px);
-}
-
-
 .date-box {
     width: 100%;
     display: flex;

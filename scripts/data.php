@@ -111,7 +111,6 @@ $date = date('Y-m-d');
         <div class="fetched_data mt-4">
             <div class="alert alert-warning shadow-lg my-2 flex justify-center items-center">
                 <div>
-                    <i class="fa-solid fa-exclamation-triangle"></i>
                     <span>
                         Text
                     </span>
@@ -136,7 +135,7 @@ $date = date('Y-m-d');
                                 <div class="font-bold" style="color: #2C3333;">
                                     Text
                                 </div>
-                                <div class="p-2 rounded bg-red-500 flex justify-center items-center text-white">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white">
                                     <?php echo $value['id']; ?>
                                 </div>
                             </li>
@@ -145,7 +144,7 @@ $date = date('Y-m-d');
                                 <div class="font-bold" style="color: #2C3333;">
                                     Nom et Prénom
                                 </div>
-                                <div class="p-2 rounded bg-red-500 flex justify-center items-center text-white">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white">
                                     <?php echo $value['nom'] . " " . $value['prenom']; ?>
                                 </div>
                             </li>
@@ -153,7 +152,7 @@ $date = date('Y-m-d');
                                 <div class="font-bold" style="color: #2C3333;">
                                     Text
                                 </div>
-                                <div class="p-2 rounded bg-red-500 flex justify-center items-center text-white">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white">
                                     <?php echo short_text($value['text_num'], 20); ?>
                                 </div>
                             </li>
@@ -161,7 +160,7 @@ $date = date('Y-m-d');
                                 <div class="font-bold" style="color: #2C3333;">
                                     Text
                                 </div>
-                                <div class="p-2 rounded bg-red-500 flex justify-center items-center text-white">
+                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white">
                                     <?php echo encode_text($value['text_encoded']); ?>
                                 </div>
                             </li>
