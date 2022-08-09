@@ -1,6 +1,8 @@
 <?php
 include '../config/connection.php';
 
+$data_found = false;
+
 if (isset($_POST['submit'])) {
     $search_value = $_POST['search'];
 
@@ -15,8 +17,10 @@ if (isset($_POST['submit'])) {
         //check if there is any result
         if (mysqli_num_rows($result) > 0) {
             $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            $data_found = true;
         } else {
-            $data = "No result";
+            $data = "Aucune donnée n'a été trouvée";
+            $data_found = false;
         }
     }
 }
@@ -110,77 +114,95 @@ $date = date('Y-m-d');
             </div>
         </div>
 
-        <div class="fetched_data mt-4">
-            <div class="alert alert-warning shadow-lg my-2 flex justify-center items-center">
-                <div>
-                    <span>
-                        Text
-                    </span>
+        <?php if ($data_found) { ?>
+            <div class="fetched_data mt-4">
+                <div class="alert alert-warning shadow-lg my-2 flex justify-center items-center">
+                    <div>
+                        <span>
+                            Text
+                        </span>
+                    </div>
+                </div>
+
+                <div class="alert alert-success shadow-lg mb-3">
+                    <div class="date-box text-center">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>
+                            <?php echo $date; ?>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto w-full shadow-lg p-3 data-list" id="data-list">
+                    <?php if (isset($data) && $data != "No result") : ?>
+                        <?php foreach ($data as $key => $value) : ?>
+                            <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
+
+                                <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
+                                    <div class="font-bold" style="color: #2C3333;">
+                                        Text
+                                    </div>
+                                    <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
+                                        <?php echo $value['id']; ?>
+                                    </div>
+                                </li>
+
+                                <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
+                                    <div class="font-bold" style="color: #2C3333;">
+                                        Nom et Prénom
+                                    </div>
+                                    <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
+                                        <?php echo $value['nom'] . " " . $value['prenom']; ?>
+                                    </div>
+                                </li>
+                                <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
+                                    <div class="font-bold" style="color: #2C3333;">
+                                        Text
+                                    </div>
+                                    <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
+                                        <?php echo short_text($value['text_num'], 20); ?>
+                                    </div>
+                                </li>
+                                <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
+                                    <div class="font-bold" style="color: #2C3333;">
+                                        Text
+                                    </div>
+                                    <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
+                                        <?php echo encode_text($value['text_encoded']); ?>
+                                    </div>
+                                </li>
+                            </ul>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+                <!-- Download button -->
+                <div class="text-center w-full mt-2">
+                    <button class="btn btn-primary w-full" @click="saveAsPdf('data-list')">
+                        <i class="fa fa-download mr-3"></i>
+                        Telecharger les données
+                    </button>
                 </div>
             </div>
-
-            <div class="alert alert-success shadow-lg mb-3">
-                <div class="date-box text-center">
-                    <i class="fa fa-calendar-alt"></i>
-                    <span>
-                        <?php echo $date; ?>
-                    </span>
+        <?php } else { ?>
+            <div class="w-50">
+                <div class="alert alert-danger shadow-lg my-2 flex justify-center items-center">
+                    <div>
+                        <span>
+                            <!-- Not found -->
+                            <div class="loader" v-else>
+                                <lottie-player src="../res/not-found.json" background="transparent" speed="1" style="width: 240px; height: 240px;" loop autoplay>
+                                </lottie-player>
+                            </div>
+                            <?php echo $data; ?>
+                        </span>
+                    </div>
                 </div>
             </div>
-
-            <div class="overflow-x-auto w-full shadow-lg p-3 data-list" id="data-list">
-                <?php if (isset($data) && $data != "No result") : ?>
-                    <?php foreach ($data as $key => $value) : ?>
-                        <ul class="w-100 divide-y-2 divide-gray-200 my-3 overflow-hidden">
-
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Text
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
-                                    <?php echo $value['id']; ?>
-                                </div>
-                            </li>
-
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Nom et Prénom
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
-                                    <?php echo $value['nom'] . " " . $value['prenom']; ?>
-                                </div>
-                            </li>
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Text
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
-                                    <?php echo short_text($value['text_num'], 20); ?>
-                                </div>
-                            </li>
-                            <li class="flex justify-between items-center space-x-2 py-2 px-4 bg-gray-100 whitespace-nowrap rounded my-2 data-list-item">
-                                <div class="font-bold" style="color: #2C3333;">
-                                    Text
-                                </div>
-                                <div class="p-2 rounded bg-blue-600 flex justify-center items-center text-white data-list-item-value">
-                                    <?php echo encode_text($value['text_encoded']); ?>
-                                </div>
-                            </li>
-                        </ul>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-            </div>
-            <!-- Download button -->
-            <div class="text-center w-full mt-2">
-                <button class="btn btn-primary w-full" @click="saveAsPdf('data-list')">
-                    <i class="fa fa-download mr-3"></i>
-                    Telecharger les données
-                </button>
-            </div>
-        </div>
+        <?php } ?>
     </div>
 
     <!-- JS -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/theme.js"></script>
 </body>
