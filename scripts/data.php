@@ -81,7 +81,9 @@ $date = date('Y-m-d');
                 </div>
             </div>
             <div class="navbar-center">
-                <a href="../index.html" class="btn btn-ghost normal-case text-xl">LOGO</a>
+                <a href="../index.html" class="btn btn-ghost normal-case text-xl">
+                    <img src="../res/logo.png" alt="logo" style="width: 100px;">
+                </a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
