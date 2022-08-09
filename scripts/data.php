@@ -1,7 +1,7 @@
 <?php
 include '../config/connection.php';
 
-$data_found = false;
+$data_found = '';
 
 if (isset($_POST['submit'])) {
     $search_value = $_POST['search'];
@@ -187,7 +187,7 @@ $date = date('Y-m-d');
             <div class="w-50">
                 <div class="alert alert-danger shadow-lg my-2 flex justify-center items-center">
                     <div>
-                        <span>
+                        <span class="text-center">
                             <!-- Not found -->
                             <div class="loader" v-else>
                                 <lottie-player src="../res/not-found.json" background="transparent" speed="1" style="width: 240px; height: 240px;" loop autoplay>
